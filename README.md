@@ -25,6 +25,8 @@ Atuo na transformação de dados em decisões estratégicas, conectando o campo 
 
 ## 📸 Captura de Tela
 
+https://github.com/user-attachments/assets/bcecb124-c7ad-4609-a99d-be2e50449599
+
 ## 📬 Contato
 - 📧 E-mail: [lfsouza94@hotmail.com](lfsouza94@hotmail.com)
 - 💼 LinkedIn: [LinkedIn](https://www.linkedin.com/in/luizfelipesouzaeag/)
