@@ -1,766 +1,134 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mateus Ferreira - Sociólogo & Data Science</title>
-    <meta name="description" content="Sociólogo especializado em Análise de Dados">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap"></noscript>
-    <link rel="preload" href="Foto.jpeg" as="image">
-    <style>
-      body {font-family: 'Poppins', sans-serif; margin: 0; padding: 0;}
-      .hero-section {padding: 2rem 0; text-align: center;}
-      .profile-img {border-radius: 50%; width: 150px; height: 150px; object-fit: cover;}
-    </style>
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-
-    <!-- Manifest PWA -->
-    <link rel="manifest" href="/manifest.webmanifest">
-
-    <!-- Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                    console.log('ServiceWorker registration successful');
-                }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-    </script>
-
-    <!-- Hotjar -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:0o0,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio - Mateus Ferreira</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    .skills, .experience, .projects {
+      margin-bottom: 3rem;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      background: #fff;
+    }
+    .project-card img {
+      max-width: 100%;
+      height: auto;
+    }
+    .project-content {
+      padding: 1rem;
+    }
+    .project-content h3 {
+      margin-top: 0;
+    }
+    .project-content a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    .project-content a:hover {
+      text-decoration: underline;
+    }
+    @media (min-width: 768px) {
+      .project-card {
+        flex-direction: row;
+      }
+      .project-card img {
+        max-width: 300px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre-mim">Sobre</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#resultados">Resultados</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="inicio" class="section hero-section">
-        <div id="particles-js"></div>
-        <div class="container">
-            <div class="hero-content">
-                <p><br><br></br></p>
-                <div class="profile-animation">
-                    <img src="Foto.jpeg" alt="Luiz Felipe Souza" class="profile-img" loading="eager" width="200" height="200">
-                </div>
-                <h1 data-aos="fade-up">Mateus Ferreira</h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Sociólogo com foco em Data Analytics | Especialista em BI, Python, SQL, Power BI| Estratégia Política para campanhas políticas e mandatos | Otimização de Processos e Tomada de Decisão Baseada em Dados</p>
-                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">Transformo dados em estratégia, conectando análise inteligente à performance e resultados mensuráveis.</p>
-                <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#contato" class="btn btn-primary pulse">Contato</a>
-                    <a href="#projetos" class="btn btn-primary pulse">Meus Projetos</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
+  <h1>👋 Mateus Ferreira</h1>
+  <p>Sociólogo, cientista de dados em formação e analista político</p>
+</header>
 
-    <section id="sobre-mim" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="highlight-text">
-                        Dados, políticas públicas e tecnologia. Dashboards, mapas e automação com Python, Streamlit, Power BI e Tableau. Social listening e análise de redes.
-                    </p>
-                    <p>
-                        MBA em Data Science e Analytics - USP/ESALQ (Abr/2025 - atual)<br>
-                        Bacharelado em Ciências Sociais - UFG (2022)
-                        Tecnólogo em Informática para Gestão de Negócio - FATEC (2008)
-                    </p>
-                </div>
-                <div class="skills-section">
-                    <h3>Habilidades Técnicas</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Linguagens & Ferramentas</h4>
-                            <ul>
-                                <li>Python</li>
-                                <li>SQL</li>
-                                <li>Excel Avançado</li>
-                                <li>Power BI</li>
-                                <li>Tableau</li>
-                                <li>Streamlit</li>
-                                <li>Mention</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Sistemas</h4>
-                            <ul>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>.</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Especializações</h4>
-                            <ul>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>.</li>
-                                <li>.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<main>
+  <section class="skills">
+    <h2>💡 Habilidades</h2>
+    <ul>
+      <li>Python para análise de dados (pandas, matplotlib, seaborn, Streamlit)</li>
+      <li>Visualização de dados (Power BI, Tableau, Streamlit)</li>
+      <li>Pesquisa aplicada em Ciências Sociais (quantitativa e qualitativa)</li>
+      <li>Estatística descritiva e testes de hipótese</li>
+      <li>Automação de tarefas e coleta de dados públicos</li>
+    </ul>
+  </section>
 
-    <section id="cursos" class="section">
-        <div class="container">
-            <h2 class="section-title">Certificações & Cursos</h2>
-            
-            <div class="certifications-grid">
-                <!-- Certificação 1 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>----/h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">----</p>
-                        <p class="date">-----</p>
-                    </div>
-                </div>
+  <section class="experience">
+    <h2>📌 Experiências com Dados</h2>
+    <ul>
+      <li><strong>Konecta (2023):</strong> apoio em análise de dados operacionais e relatórios internos em ambientes de alto volume.</li>
+      <li><strong>Projeto pessoal:</strong> análise dos dados de votação de vereadores de Goiás (2004–2024).</li>
+      <li><strong>Consultoria política:</strong> monitoramento de redes sociais e visualização de desempenho eleitoral.</li>
+      <li><strong>Projeto acadêmico:</strong> uso de dados da POF e IRPF para estudar regressividade tributária no Brasil.</li>
+    </ul>
+  </section>
 
-                <!-- Certificação 2 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>-------</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">-------</p>
-                        <p class="date">2025</p>
-                    </div>
-                </div>
+  <section class="projects">
+    <h2>📂 Projetos</h2>
 
-                <!-- Certificação 3 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>-------</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">Ada</p>
-                        <p class="date">2024</p>
-                    </div>
-                </div>
+    <div class="project-card">
+      <img src="img_painel.png" alt="Painel de Vereadores">
+      <div class="project-content">
+        <h3>Painel de Vereadores de Goiás</h3>
+        <p>Dashboard interativo com os dados de todos os vereadores eleitos em Goiás de 2004 a 2024.</p>
+        <a href="https://painel-vereadores-goias.streamlit.app/" target="_blank">🔗 Acessar app</a>
+      </div>
+    </div>
 
-                <!-- Certificação 4 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>-----</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">S------</p>
-                        <p class="date">2024</p>
-                    </div>
-                </div>
-                
-                <!-- Certificação 5 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>------</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">----</p>
-                        <p class="date">2024</p>
-                    </div>
-                </div>
+    <div class="project-card">
+      <img src="img_mapa.png" alt="Mapa de votação">
+      <div class="project-content">
+        <h3>Mapa Eleitoral de Goiânia</h3>
+        <p>Visualização da votação por bairro/microrregião nas eleições de 2022.</p>
+        <a href="https://github.com/seuusuario/mapa-eleitoral" target="_blank">🔗 Ver projeto no GitHub</a>
+      </div>
+    </div>
 
-                <!-- Certificação 6 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>--------s</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">-----</p>
-                        <p class="date">2024</p>
-                    </div>
-                </div>
-                
-                <!-- Certificação 7 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>------</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">----</p>
-                        <p class="date">2022</p>
-                    </div>
-                </div>
-                
-                <!-- Certificação 8 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>------</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">-----</p>
-                        <p class="date">2022</p>
-                    </div>
-                </div>
-                
-                <!-- Certificação 9 -->
-                <div class="certification-item">
-                    <div class="certification-header">
-                        <i class="fas fa-certificate"></i>
-                        <h3>-----</h3>
-                    </div>
-                    <div class="certification-body">
-                        <p class="institution">-----</p>
-                        <p class="date">2022</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+    <div class="project-card">
+      <img src="img_chi2.png" alt="Teste estatístico">
+      <div class="project-content">
+        <h3>Teste Qui-quadrado em candidaturas negras</h3>
+        <p>Análise de representatividade racial nas eleições de 2020 usando Python e estatística descritiva.</p>
+        <a href="https://github.com/seuusuario/analise-candidatos" target="_blank">🔗 Ver repositório</a>
+      </div>
+    </div>
 
-    <section id="experiencia" class="section">
-        <div class="container">
-            <h2 class="section-title">Experiência Profissional</h2>
-            
-            <div class="data-timeline">
-                <!-- Pedra Agroindustrial -->
-                <div class="data-experience">
-                    <div class="experience-header" data-aos="fade-up">
-                        <div class="experience-badge">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="experience-title">
-                            <h3>Analista de Manutenção Corporativo</h3>
-                            <div class="experience-meta">
-                                <span class="company">Pedra Agroindustrial S/A</span>
-                                <span class="date">Ago 2022 - Mar 2025</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-content" data-aos="fade-up" data-aos-delay="100">
-                        <div class="data-card">
-                            <div class="data-details">
-                                <ul class="data-list">
-                                    <li><i class="fas fa-chart-line"></i> Gerenciei e automatizei indicadores críticos (MTTR, MTBF, Disponibilidade e Consumo de Combustível), promovendo decisões rápidas e baseadas em dados.</li>
-                                    <li><i class="fas fa-cogs"></i> Desenvolvi uma ferramenta de auditoria de abastecimento e horímetro, aumentando a confiabilidade nos apontamentos da frota.</li>
-                                    <li><i class="fas fa-clock"></i> Reduzi o tempo de fechamento mensal de 5 para 3 dias (40%) com otimizações em rotinas de ETL e consolidação de dados.</li>
-                                    <li><i class="fas fa-gas-pump"></i> Realizei análise histórica de consumo de combustível por modelo de equipamento e tipo de operação, definindo limites de desempenho.</li>
-                                    <li><i class="fas fa-chart-bar"></i> Criei novos indicadores operacionais utilizando Python, Excel e SQL, trazendo visibilidade e controle a operações sem métricas definidas.</li>
-                                    <li><i class="fas fa-tasks"></i> Elaboração de POPs e suporte ao sistema PIMS (Totvs), padronizando rotinas de manutenção.</li>
-                                    <li><i class="fas fa-tools"></i> Atuei no operacional da oficina agrícola por 8 meses, onde projetei um sistema pneumático de lubrificação que aumentou a vida útil dos componentes.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Schmidt Agrícola -->
-                <div class="data-experience">
-                    <div class="experience-header" data-aos="fade-up">
-                        <div class="experience-badge">
-                            <i class="fas fa-tractor"></i>
-                        </div>
-                        <div class="experience-title">
-                            <h3>Estagiário em Engenharia Agrícola</h3>
-                            <div class="experience-meta">
-                                <span class="company">Schmidt Agrícola</span>
-                                <span class="date">Mar 2021 - Set 2021</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-content" data-aos="fade-up" data-aos-delay="100">
-                        <div class="data-card">
-                            <div class="data-details">
-                                <ul class="data-list">
-                                    <li><i class="fas fa-satellite-dish"></i> Apliquei análise de dados via telemetria para reduzir tempo de motor ocioso, antecipar falhas por aquecimento e otimizar pulverizações conforme clima.</li>
-                                    <li><i class="fas fa-mobile-alt"></i> Desenvolvi um aplicativo com Power Apps para rastreabilidade da produção de algodão, com coleta offline e dashboards em Power BI automatizados com Python.</li>
-                                    <li><i class="fas fa-project-diagram"></i> Criei um sistema em Streamlit com integração à API da Solinftec para visualização de indicadores operacionais.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Enagri Júnior -->
-                <div class="data-experience">
-                    <div class="experience-header" data-aos="fade-up">
-                        <div class="experience-badge">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="experience-title">
-                            <h3>Trainee, Consultor Júnior e Diretor de Gestão de Pessoas</h3>
-                            <div class="experience-meta">
-                                <span class="company">Enagri Júnior</span>
-                                <span class="date">Set 2018 - Set 2019</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-content" data-aos="fade-up" data-aos-delay="100">
-                        <div class="data-card">
-                            <div class="data-details">
-                                <ul class="data-list">
-                                    <li><i class="fas fa-user-friends"></i> Reestruturei a empresa com um novo processo seletivo de trainees e sistema de reconhecimento por desempenho, elevando o engajamento e retenção.</li>
-                                    <li><i class="fas fa-project-diagram"></i> Liderei equipes multidisciplinares na entrega de projetos como sistemas de silos para grãos e irrigação residencial.</li>
-                                    <li><i class="fas fa-hands-helping"></i> Coordenei um projeto social em escola pública, envolvendo doação de livros e atividades lúdicas.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </section>
+</main>
 
-    <section id="resultados" class="section">
-        <div class="container">
-            <h2 class="section-title">Resultados e Impacto</h2>
-            <div class="metrics-grid">
-                <!-- Card 1 -->
-                <div class="metric-card" data-aos="fade-up">
-                    <div class="metric-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>40%</h3>
-                    <p>Redução no tempo de fechamento mensal de relatórios</p>
-                    <div class="metric-chart">
-                        <canvas id="chart-time-reduction"></canvas>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="metric-icon">
-                        <i class="fas fa-gas-pump"></i>
-                    </div>
-                    <h3>2%</h3>
-                    <p>Economia de combustível após análise operacional</p>
-                    <div class="metric-chart">
-                        <canvas id="chart-fuel-savings"></canvas>
-                    </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="metric-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>20+</h3>
-                    <p>Indicadores automatizados para tomada de decisão</p>
-                    <div class="metric-chart">
-                        <canvas id="chart-indicators"></canvas>
-                    </div>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="metric-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>30%</h3>
-                    <p>Aumento na vida útil de componentes mecânicos</p>
-                    <div class="metric-chart">
-                        <canvas id="chart-component-life"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projetos" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Projetos Relevantes</h2>
-            <div class="projects-grid">
-                <div class="project-item" data-tech="Previsão do Tempo nas Capitais Brasileiras">
-                    <div class="project-image">
-                        <img src="Dashboard_Bi.png" alt="Previsão do Tempo nas Capitais Brasileiras">
-                    </div>
-                    <div class="project-content">
-                        <h3>Previsão do Tempo nas Capitais Brasileiras</h3>
-                        <p>Este projeto consome a API pública da OpenWeatherMap para coletar previsões climáticas das 27 capitais do Brasil para os próximos 5 dias (a cada 3h).</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">OpenWeatherMap</span>
-                        </div>
-                        <a href="https://github.com/SouzaLF/Previsao-do-Tempo-nas-Capitais-Brasileiras" class="btn btn-small btn-gradient" target="_blank">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-item" data-tech="Análise e Previsão de Preços de Cacau (2000-2005)">
-                    <div class="project-image">
-                        <img src="Modelo.png" alt="Análise e Previsão de Preços de Cacau (2000-2005)">
-                    </div>
-                    <div class="project-content">
-                        <h3>Análise e Previsão de Preços de Cacau (2000-2005)</h3>
-                        <p>Análise completa de séries temporais e modelo preditivo para preços históricos de cacau com dados obtidos do Kaggle.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">ScikitLearn</span>
-                            <span class="tech-tag">Plotly</span>
-                        </div>
-                        <a href="https://github.com/SouzaLF/Analise-kaggle-dados-cacau-2000-2005" class="btn btn-small btn-gradient" target="_blank">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-item" data-tech="Estudo de modelos computacionais aplicados em confiabilidade estrutural">
-                    <div class="project-image">
-                        <img src="Silo.jpg" alt="Estudo de modelos computacionais aplicados em confiabilidade estrutural">
-                    </div>
-                    <div class="project-content">
-                        <h3>Estudo de modelos computacionais aplicados em confiabilidade estrutural</h3>
-                        <p>Desenvolvimento de um modelo de predição das pressões em comparação aos dados experimentais.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Silos Esbeltos</span>
-                            <span class="tech-tag">Redes Neurais Artificiais</span>
-                            <span class="tech-tag">Confiabilidade estrutural</span>
-                        </div>
-                        <a href="https://sigaa.ufla.br/sigaa/public/pesquisa/consulta_bolsistas.jsf" class="btn btn-small btn-gradient" target="_blank">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-item" data-tech="python pandas excel automacao">
-                    <div class="project-image">
-                        <img src="Auditoria.png" alt="Sistema de Verificação de Horímetro">
-                    </div>
-                    <div class="project-content">
-                        <h3>Auditoria Automatizada de Horímetro e Abastecimentos</h3>
-                        <p>Sistema de análise de dados para verificação de inconsistências em registros de horímetro e abastecimentos de frota agrícola, identificando erros de lançamento e padrões operacionais.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Excel</span>
-                            <span class="tech-tag">Automação</span>
-                            <span class="tech-tag">Data Cleaning</span>
-                        </div>
-                        <a href="https://github.com/SouzaLF/Verificacao-de-Horimetro-e-Controle-de-Abastecimento" class="btn btn-small btn-gradient" target="_blank">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-item" data-tech="python powerbi sql agricultura">
-                    <div class="project-image">
-                        <img src="Consumo.png" alt="Dashboard de Análise de Consumo de Combustível">
-                    </div>
-                    <div class="project-content">
-                        <h3>Análise de Consumo de Combustível por Operação Agrícola</h3>
-                        <p>Sistema de Business Intelligence para otimização de custos operacionais através da análise histórica de consumo de combustível por tipo de equipamento e operação agrícola.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">ETL</span>
-                            <span class="tech-tag">Agricultura de Precisão</span>
-                        </div>
-                        <a href="#combustivel-details" class="btn btn-small btn-gradient" target="_blank">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-item" data-tech="python powerbi sql agricultura geoprocessamento">
-                    <div class="project-image">
-                        <img src="Precisao.png" alt="Dashboard de Análise de Dados Operacionais">
-                    </div>
-                    <div class="project-content">
-                        <h3>Análise de Dados Operacionais na Agricultura de Precisão</h3>
-                        <p>Sistema de análise de dados operacionais que integra dados de maquinário agrícola, sensores e imagens de satélite para otimização de operações agrícolas e tomada de decisão baseada em dados.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Geoprocessamento</span>
-                            <span class="tech-tag">Agricultura de Precisão</span>
-                        </div>
-                        <a href="https://github.com/SouzaLF/Analise-de-Dados-Operacionais-na-Agricultura-de-Precisao" class="btn btn-small btn-gradient" target="_blank">Ver Projeto <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-                
-
-    <section id="contato" class="section contact-section">
-        <div class="container">
-            <h2 class="section-title">Contato</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Informações de Contato</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Goiânia-GO</p>
-                    <p><i class="fas fa-phone"></i> +55 (11) 98818-9104</p>
-                    <p><i class="fas fa-envelope"></i>mateusferreiragoias@gmail.com</p>
-                </div>
-                <div class="social-links">
-                    <h3>Redes</h3>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/luizfelipesouzaeag/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/SouzaLF" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="Mateus_Ferreira.pdf" class="social-icon" download="Mateus_Ferreira.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Mateus Ferreira.</p>
-            <p class="footer-note">..</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Inicializar animações
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out-quad',
-            once: true
-        });
-        
-        // Carregar scripts de forma otimizada
-        function loadScript(src, callback) {
-            const script = document.createElement('script');
-            script.src = src;
-            script.async = true;
-            script.onload = callback;
-            document.body.appendChild(script);
-        }
-
-        // Adicione isso ao seu script existente
-        const heroSubtitle = document.querySelector('.hero-subtitle');
-        const phrases = [
-            "Engenheiro Agrícola com foco em Data Analytics",
-            "Especialista em BI, Python, SQL e Power BI",
-            "Agricultura de Precisão e Conectividade de Máquinas",
-            "Otimização de Processos e Tomada de Decisão Baseada em Dados"
-        ];
-
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let isEnd = false;
-
-        function typeWriter() {
-            const currentPhrase = phrases[phraseIndex];
-            
-            if (isDeleting) {
-                heroSubtitle.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                heroSubtitle.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                isEnd = true;
-                isDeleting = true;
-                setTimeout(typeWriter, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                setTimeout(typeWriter, 500);
-            } else {
-                const speed = isDeleting ? 50 : 100;
-                setTimeout(typeWriter, speed);
-            }
-        }
-
-        // Iniciar o efeito após o carregamento da página
-        window.addEventListener('load', () => {
-            setTimeout(typeWriter, 1000);
-        });
-        
-        // Carregar scripts não críticos após o carregamento da página
-        window.addEventListener('load', function() {
-            loadScript('https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js', function() {
-                // Efeito de inclinação nos cartões de projetos
-                VanillaTilt.init(document.querySelectorAll(".project-item"), {
-                    max: 15,
-                    speed: 400,
-                    glare: true,
-                    "max-glare": 0.2,
-                });
-            });
-        });
-    </script>
-
-    <script>
-        // Simulação de gráficos de dados
-        document.addEventListener('DOMContentLoaded', function() {
-            // Configurações comuns
-            const chartConfig = {
-                backgroundColor: '#f8f9fa',
-                borderColor: '#3498db',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.4
-            };
-            
-            // MTTR Chart
-            createChart('chart-mttr', {
-                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai'],
-                datasets: [{
-                    ...chartConfig,
-                    data: [8, 6.5, 5.2, 4.8, 3.9],
-                    label: 'MTTR (horas)'
-                }]
-            });
-            
-            // Fuel Efficiency Chart
-            createChart('chart-fuel', {
-                labels: ['Trator A', 'Colheitadeira B', 'Pulverizador C'],
-                datasets: [{
-                    ...chartConfig,
-                    data: [12.5, 18.2, 15.7],
-                    label: 'Consumo (L/h)'
-                }]
-            });
-            
-            // Telemetry Chart
-            createChart('chart-telemetry', {
-                labels: ['Motor Ocioso', 'Operação', 'Deslocamento'],
-                datasets: [{
-                    ...chartConfig,
-                    data: [25, 60, 15],
-                    label: 'Tempo (%)'
-                }]
-            });
-            
-            // Engagement Chart
-            createChart('chart-engagement', {
-                labels: ['Antes', 'Depois'],
-                datasets: [{
-                    ...chartConfig,
-                    data: [65, 88],
-                    label: 'Engajamento (%)'
-                }]
-            });
-            
-            function createChart(elementId, config) {
-                const ctx = document.getElementById(elementId).getContext('2d');
-                
-                // Criar efeito de gradiente
-                const gradient = ctx.createLinearGradient(0, 0, 0, 100);
-                gradient.addColorStop(0, 'rgba(52, 152, 219, 0.2)');
-                gradient.addColorStop(1, 'rgba(52, 152, 219, 0)');
-                
-                // Configuração final
-                const finalConfig = {
-                    type: 'line',
-                    data: {
-                        labels: config.labels,
-                        datasets: config.datasets.map(dataset => ({
-                            ...dataset,
-                            backgroundColor: gradient,
-                            borderColor: '#3498db',
-                            pointBackgroundColor: '#fff',
-                            pointBorderColor: '#3498db',
-                            pointBorderWidth: 2,
-                            pointRadius: 4
-                        }))
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: {
-                                display: false
-                            },
-                            tooltip: {
-                                enabled: false
-                            }
-                        },
-                        scales: {
-                            y: {
-                                display: false,
-                                beginAtZero: true
-                            },
-                            x: {
-                                display: false
-                            }
-                        },
-                        animation: {
-                            duration: 2000
-                        }
-                    }
-                };
-                
-                new Chart(ctx, finalConfig);
-            }
-        });
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            particlesJS('particles-js', {
-                particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: "#ffffff" },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.5, random: true },
-                    size: { value: 3, random: true },
-                    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-                    move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
-                },
-                interactivity: {
-                    detect_on: "canvas",
-                    events: {
-                        onhover: { enable: true, mode: "repulse" },
-                        onclick: { enable: true, mode: "push" }
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>
