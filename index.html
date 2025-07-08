@@ -11,25 +11,53 @@
       color: #333;
       margin: 0;
       padding: 0;
+      position: relative;
     }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
     header {
       background: #111;
       color: #fff;
       padding: 2rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
+
+    .header-text {
+      text-align: right;
+      flex: 1;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 2rem;
+    }
+
     main {
       max-width: 1000px;
       margin: auto;
       padding: 2rem;
     }
+
     h2 {
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.5rem;
     }
+
     .skills, .experience, .projects {
       margin-bottom: 3rem;
     }
+
     .project-card {
       display: flex;
       flex-direction: column;
@@ -39,23 +67,29 @@
       margin-bottom: 2rem;
       background: #fff;
     }
+
     .project-card img {
       max-width: 100%;
       height: auto;
     }
+
     .project-content {
       padding: 1rem;
     }
+
     .project-content h3 {
       margin-top: 0;
     }
+
     .project-content a {
       color: #007acc;
       text-decoration: none;
     }
+
     .project-content a:hover {
       text-decoration: underline;
     }
+
     @media (min-width: 768px) {
       .project-card {
         flex-direction: row;
@@ -70,14 +104,19 @@
 </head>
 <body>
 
+<div id="particles-js"></div>
+
 <header>
-  <h1>👋 Mateus Ferreira</h1>
-  <p>Sociólogo, cientista de dados em formação e analista político</p>
+  <img src="fot.pneg" alt="Foto de Mateus Ferreira">
+  <div class="header-text">
+    <h1>Mateus Ferreira</h1>
+    <p>Sociólogo, cientista de dados em formação e analista político</p>
+  </div>
 </header>
 
 <main>
   <section class="skills">
-    <h2>💡 Habilidades</h2>
+    <h2>Habilidades</h2>
     <ul>
       <li>Python para análise de dados (pandas, matplotlib, seaborn, Streamlit)</li>
       <li>Visualização de dados (Power BI, Tableau, Streamlit)</li>
@@ -88,22 +127,22 @@
   </section>
 
   <section class="experience">
-    <h2>📌 Experiências com Dados</h2>
+    <h2>Experiências com Dados</h2>
     <ul>
       <li><strong>Konecta (2023):</strong> apoio em análise de dados operacionais e relatórios internos em ambientes de alto volume.</li>
       <li><strong>Consultoria política:</strong> monitoramento de redes sociais e visualização de desempenho eleitoral.</li>
-      <li><strong>Projeto acadêmico:</strong> Avaliação do perfil eleitoral de candidato negros e indígenas.</li>
+      <li><strong>Projeto acadêmico:</strong> uso de dados da POF e IRPF para estudar regressividade tributária no Brasil.</li>
     </ul>
   </section>
 
   <section class="projects">
-    <h2>📂 Projetos</h2>
+    <h2>Projetos</h2>
 
     <div class="project-card">
       <img src="img_painel.png" alt="Painel de Vereadores">
       <div class="project-content">
         <h3>Painel de Vereadores de Goiás</h3>
-        <p>Dashboard interativo com os dados de todos os vereadores eleitos em Goiás de 2004 a 2024.</p>
+        <p>Dashboard interativo com os dados de todos os candidatos a vereador em Goiás de 2004 a 2024.</p>
         <a href="https://painel-vereadores-goias.streamlit.app/" target="_blank">🔗 Acessar app</a>
       </div>
     </div>
@@ -121,13 +160,19 @@
       <img src="img_chi2.png" alt="Teste estatístico">
       <div class="project-content">
         <h3>Teste Qui-quadrado em candidaturas negras</h3>
-        <p>Análise de representatividade racial nas eleições de 2020 usando Python e estatística descritiva.</p>
+        <p>Análise de representatividade racial nas eleições de 2016 e 2020 usando Python e estatística descritiva.</p>
         <a href="https://github.com/seuusuario/analise-candidatos" target="_blank">🔗 Ver repositório</a>
       </div>
     </div>
-
   </section>
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.json', function() {
+    console.log('particles.js carregado');
+  });
+</script>
 
 </body>
 </html>
